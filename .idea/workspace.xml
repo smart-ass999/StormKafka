@@ -9,10 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da571aa3-a259-4e31-8957-76c43168b3d6" name="Changes" comment="增加了一些注释">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/myJDBC/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myJDBC/Result.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/myJDBC/myUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myJDBC/myUtils.java" afterDir="false" />
+    <list default="true" id="da571aa3-a259-4e31-8957-76c43168b3d6" name="Changes" comment="修改了变量名，增加了json格式范例">
+      <change beforePath="$PROJECT_DIR$/out/StormKafka_jar/StormKafka.jar" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,7 +203,7 @@
       <workItem from="1658819883672" duration="10578000" />
       <workItem from="1658833071797" duration="5956000" />
       <workItem from="1658881360327" duration="11953000" />
-      <workItem from="1658903886007" duration="6847000" />
+      <workItem from="1658903886007" duration="7219000" />
     </task>
     <task id="LOCAL-00001" summary="编写了JDBC模块，但没有并入到storm部分">
       <created>1658894938667</created>
@@ -235,7 +233,21 @@
       <option name="project" value="LOCAL" />
       <updated>1658908225391</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="修改了变量名，增加了json格式范例">
+      <created>1658913421471</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1658913421471</updated>
+    </task>
+    <task id="LOCAL-00006" summary="修改了变量名，增加了json格式范例">
+      <created>1658913569280</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1658913569280</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,7 +267,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="编写了JDBC模块，但没有并入到storm部分" />
     <MESSAGE value="增加了一些注释" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加了一些注释" />
+    <MESSAGE value="修改了变量名，增加了json格式范例" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改了变量名，增加了json格式范例" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
