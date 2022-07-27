@@ -201,7 +201,7 @@
       <workItem from="1658819883672" duration="10578000" />
       <workItem from="1658833071797" duration="5956000" />
       <workItem from="1658881360327" duration="11953000" />
-      <workItem from="1658903886007" duration="7528000" />
+      <workItem from="1658903886007" duration="7754000" />
     </task>
     <task id="LOCAL-00001" summary="编写了JDBC模块，但没有并入到storm部分">
       <created>1658894938667</created>
@@ -252,7 +252,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658913880212</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="修改了变量名，增加了json格式范例">
+      <created>1658914001383</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1658914001383</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
