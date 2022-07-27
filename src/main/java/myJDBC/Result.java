@@ -9,6 +9,6 @@ public class Result {
         String entrust_account = "未知";
         String stock_symbol = "未知";
         String description = "未知";
-        String Risk_level = "未知";
+        String risk_level = "未知";
 
 }
