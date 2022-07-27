@@ -1,5 +1,5 @@
 package myJDBC;
-
+//定义风险结果数据对象
 public class Result {
 
         String exception_scenarios = "未知";

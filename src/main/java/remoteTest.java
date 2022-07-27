@@ -5,26 +5,31 @@ import org.apache.storm.topology.TopologyBuilder;
 import org.apache.storm.Config;
 
 import java.util.Collections;
-
+//主类
 public class remoteTest {
-
+    //主方法
     public static void main(String[] args) throws Exception {
+        //以下为storm拓扑构造
         TopologyBuilder topologyBuilder = new TopologyBuilder();
-        topologyBuilder.setSpout("kafkaSpout",new kafkaBolt());
+        //构造spout，kafkaSpout()为spout具体实现，请打开kafkaSpout.java查看
+        topologyBuilder.setSpout("kafkaSpout",new kafkaSpout());
         topologyBuilder.setBolt("ParserBolt", new ParserBolt()).shuffleGrouping("kafkaSpout");
         topologyBuilder.setBolt("analyseBolt", new analyseBolt()).shuffleGrouping("ParserBolt");
         topologyBuilder.setBolt("dataBaseBolt", new dataBaseBolt()).shuffleGrouping("analyseBolt");
         StormTopology topology = topologyBuilder.createTopology();
+        //在本地提交
         localSubmit(topology);
 
 
     }
+    //本地提交入口，可以运行
     public static void localSubmit(StormTopology topology)
     {
         Config conf = new Config();
         LocalCluster localCluster = new LocalCluster();
         localCluster.submitTopology("numberTopology",conf,topology);
     }
+    //远程提交入口，目前仍在开发中
     public static void remoteSubmit(StormTopology topology, String Name) throws Exception{
         Config conf = new Config();
         conf.put(Config.NIMBUS_SEEDS, Collections.singletonList("124.221.196.162"));
