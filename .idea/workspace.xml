@@ -9,7 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da571aa3-a259-4e31-8957-76c43168b3d6" name="Changes" comment="" />
+    <list default="true" id="da571aa3-a259-4e31-8957-76c43168b3d6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/myJDBC/Init.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myJDBC/myUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myJDBC/myUtils.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,6 +29,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -39,6 +46,7 @@
     <option name="version" value="2" />
   </component>
   <component name="ProjectId" id="2CElZgdXo5bwA4CMBvbpQRkMshZ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -58,11 +66,15 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\StormKafka\src\main\resources" />
+      <recent name="E:\StormKafka\src\main\java\myJDBC" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.remoteTest">
+  <component name="RunManager" selected="JUnit.myUtils.InsertInit">
     <configuration name="remoteTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="remoteTest" />
       <module name="StormKafka" />
@@ -70,17 +82,66 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Utils" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="myUtils.InsertInit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="StormKafka" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value=".*" />
+          <option name="PATTERN" value="myJDBC.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="JDBC" />
-      <option name="MAIN_CLASS_NAME" value="myJDBC.Utils" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="myJDBC" />
+      <option name="MAIN_CLASS_NAME" value="myJDBC.myUtils" />
+      <option name="METHOD_NAME" value="InsertInit" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="myUtils.InsertResult" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StormKafka" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="myJDBC.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="myJDBC" />
+      <option name="MAIN_CLASS_NAME" value="myJDBC.myUtils" />
+      <option name="METHOD_NAME" value="InsertResult" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="myUtils.Select" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StormKafka" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="myJDBC.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="myJDBC" />
+      <option name="MAIN_CLASS_NAME" value="myJDBC.myUtils" />
+      <option name="METHOD_NAME" value="Select" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="myUtils.getConnection" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StormKafka" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="myJDBC.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="myJDBC" />
+      <option name="MAIN_CLASS_NAME" value="myJDBC.myUtils" />
+      <option name="METHOD_NAME" value="getConnection" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -96,33 +157,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Utils.getConnection" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="StormKafka" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value=".*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="JDBC" />
-      <option name="MAIN_CLASS_NAME" value="myJDBC.Utils" />
-      <option name="METHOD_NAME" value="getConnection" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.myUtils.InsertInit" />
+        <item itemvalue="JUnit.myUtils.Select" />
+        <item itemvalue="JUnit.myUtils.InsertResult" />
+        <item itemvalue="JUnit.myUtils.getConnection" />
         <item itemvalue="Application.remoteTest" />
-        <item itemvalue="JUnit.Utils" />
-        <item itemvalue="TestNG.Utils.getConnection" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\36277\AppData\Roaming\Subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="da571aa3-a259-4e31-8957-76c43168b3d6" name="Changes" comment="" />
@@ -141,12 +189,24 @@
       <workItem from="1658817169126" duration="1713000" />
       <workItem from="1658819386927" duration="442000" />
       <workItem from="1658819883672" duration="10578000" />
-      <workItem from="1658833071797" duration="4737000" />
+      <workItem from="1658833071797" duration="5956000" />
+      <workItem from="1658881360327" duration="11415000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
