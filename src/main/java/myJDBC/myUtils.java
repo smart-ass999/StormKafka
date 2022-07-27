@@ -28,7 +28,7 @@ public class myUtils {
     //插入风险结果数据
     public static void InsertResult(Result result) throws Exception {
         Connection conn = getConnection();
-        String insertSQL = "insert into result values ("+"\'"+result.exception_scenarios+"\'"+","+"\'"+result.exception_date+"\'"+","+"\'"+result.exception_time+"\'"+","+"\'"+result.market_sector+"\'"+","+"\'"+result.entrust_account+"\'"+","+"\'"+result.stock_symbol+"\'"+","+"\'"+result.description+"\'"+","+"\'"+result.Risk_level+"\'"+")";
+        String insertSQL = "insert into result values ("+"\'"+result.exception_scenarios+"\'"+","+"\'"+result.exception_date+"\'"+","+"\'"+result.exception_time+"\'"+","+"\'"+result.market_sector+"\'"+","+"\'"+result.entrust_account+"\'"+","+"\'"+result.stock_symbol+"\'"+","+"\'"+result.description+"\'"+","+"\'"+result.risk_level+"\'"+")";
         Statement st = conn.createStatement();
         st.executeUpdate(insertSQL);
         System.out.println("插入一条数据");
