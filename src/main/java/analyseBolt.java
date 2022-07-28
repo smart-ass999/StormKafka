@@ -9,9 +9,9 @@ public class analyseBolt extends BaseBasicBolt {
     private BasicOutputCollector basicOutputCollector;
     @Override
     public void execute(Tuple tuple, BasicOutputCollector basicOutputCollector) {
-        System.out.println("获得数据" + tuple.getIntegerByField("result"));
+        System.out.println("获得数据" + tuple.getStringByField("result"));
         this.basicOutputCollector = basicOutputCollector;
-        this.basicOutputCollector.emit(new Values(tuple.getIntegerByField("result")));
+        this.basicOutputCollector.emit(new Values(tuple.getStringByField("result")));
 
     }
 
