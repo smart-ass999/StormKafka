@@ -1,4 +1,7 @@
+import com.google.gson.JsonArray;
+import com.google.gson.JsonParser;
 import myJDBC.Result;
+import org.apache.storm.shade.org.apache.commons.io.FileUtils;
 import org.apache.storm.spout.SpoutOutputCollector;
 import org.apache.storm.task.TopologyContext;
 import org.apache.storm.topology.OutputFieldsDeclarer;
@@ -6,6 +9,8 @@ import org.apache.storm.topology.base.BaseRichSpout;
 import org.apache.storm.tuple.Fields;
 import org.apache.storm.tuple.Values;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.Map;
 
 public class kafkaSpout extends BaseRichSpout {
@@ -22,12 +27,20 @@ public class kafkaSpout extends BaseRichSpout {
     public void nextTuple() {
         int number = 1;
         Result result = new Result();
-        //发送数据：1
-        this.spoutOutputCollector.emit(new Values(number));
+
+        File file = new File(kafkaSpout.class.getClassLoader().getResource("entrustData.json").getFile());
+        String data = "";
         try {
-            System.out.println("生成数据1");
+            data = FileUtils.readFileToString(file, "utf-8");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        //发送数据：1
+        this.spoutOutputCollector.emit(new Values(data));
+        try {
+            System.out.println("生成数据" + data);
             //五秒发送一次
-            Thread.sleep(5000);
+            Thread.sleep(10000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

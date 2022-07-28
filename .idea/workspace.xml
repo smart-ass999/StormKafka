@@ -9,7 +9,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da571aa3-a259-4e31-8957-76c43168b3d6" name="Changes" comment="修改了变量名，增加了json格式范例" />
+    <list default="true" id="da571aa3-a259-4e31-8957-76c43168b3d6" name="Changes" comment="修改了变量名，增加了json格式范例">
+      <change afterPath="$PROJECT_DIR$/src/main/java/myKafka/CustomConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/myKafka/CustomProducerCallbackJSON.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StormKafka.iml" beforeDir="false" afterPath="$PROJECT_DIR$/StormKafka.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ParserBolt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ParserBolt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/analyseBolt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/analyseBolt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dataBaseBolt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataBaseBolt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kafkaSpout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kafkaSpout.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,7 +75,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/myKafka" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -76,6 +86,9 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\StormKafka\src\main\java\myKafka" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\StormKafka\src\main\resources" />
       <recent name="E:\StormKafka\src\main\java\myJDBC" />
@@ -92,6 +105,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CustomConsumer.consumerStart" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StormKafka" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="myKafka.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="myKafka" />
+      <option name="MAIN_CLASS_NAME" value="myKafka.CustomConsumer" />
+      <option name="METHOD_NAME" value="consumerStart" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CustomProducerCallbackJSON.producerStart" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StormKafka" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="myKafka.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="myKafka" />
+      <option name="MAIN_CLASS_NAME" value="myKafka.CustomProducerCallbackJSON" />
+      <option name="METHOD_NAME" value="producerStart" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="myUtils.InsertInit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="StormKafka" />
       <extension name="coverage">
@@ -103,22 +148,6 @@
       <option name="PACKAGE_NAME" value="myJDBC" />
       <option name="MAIN_CLASS_NAME" value="myJDBC.myUtils" />
       <option name="METHOD_NAME" value="InsertInit" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="myUtils.InsertResult" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="StormKafka" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="myJDBC.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="myJDBC" />
-      <option name="MAIN_CLASS_NAME" value="myJDBC.myUtils" />
-      <option name="METHOD_NAME" value="InsertResult" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -140,22 +169,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="myUtils.getConnection" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="StormKafka" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="myJDBC.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="myJDBC" />
-      <option name="MAIN_CLASS_NAME" value="myJDBC.myUtils" />
-      <option name="METHOD_NAME" value="getConnection" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -170,10 +183,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.remoteTest" />
+        <item itemvalue="JUnit.CustomConsumer.consumerStart" />
+        <item itemvalue="JUnit.CustomProducerCallbackJSON.producerStart" />
         <item itemvalue="JUnit.myUtils.InsertInit" />
         <item itemvalue="JUnit.myUtils.Select" />
-        <item itemvalue="JUnit.myUtils.InsertResult" />
-        <item itemvalue="JUnit.myUtils.getConnection" />
       </list>
     </recent_temporary>
   </component>
@@ -201,7 +214,9 @@
       <workItem from="1658819883672" duration="10578000" />
       <workItem from="1658833071797" duration="5956000" />
       <workItem from="1658881360327" duration="11953000" />
-      <workItem from="1658903886007" duration="7754000" />
+      <workItem from="1658903886007" duration="10229000" />
+      <workItem from="1658928800363" duration="2050000" />
+      <workItem from="1658990532772" duration="6683000" />
     </task>
     <task id="LOCAL-00001" summary="编写了JDBC模块，但没有并入到storm部分">
       <created>1658894938667</created>
@@ -259,7 +274,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658914001383</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="修改了变量名，增加了json格式范例">
+      <created>1658914234263</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1658914234263</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,7 +292,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
