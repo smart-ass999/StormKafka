@@ -1,15 +1,17 @@
 package myJDBC;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+import org.apache.storm.shade.com.google.common.reflect.TypeToken;
 import org.apache.storm.shade.org.apache.commons.io.FileUtils;
 import org.junit.Test;
 
 import java.io.*;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.lang.reflect.Type;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 //数据库工具类，所有的类均已经过测试
 public class myUtils {
@@ -69,4 +71,28 @@ public class myUtils {
         Result resultObject = gson.fromJson(resultString, Result.class);
         return resultObject;
     }
+    public void getResult1()
+    {
+        File file = new File(myUtils.class.getClassLoader().getResource("dataTest.json").getFile());
+        String data = "";
+        try {
+            data = FileUtils.readFileToString(file, "utf-8");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Gson gson = new Gson();
+        Type type = new TypeToken<List<Entrust>>(){}.getType();
+        List<Entrust> entrustsList = gson.fromJson(data, type);
+        System.out.println(entrustsList.get(1).entrust_date);
+
+    }
+    public List<Entrust> getResult(String data)
+    {
+        Gson gson = new Gson();
+        Type type = new TypeToken<List<Entrust>>(){}.getType();
+        List<Entrust> entrustsList = gson.fromJson(data, type);
+        return entrustsList;
+
+    }
+
 }

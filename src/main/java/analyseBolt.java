@@ -17,7 +17,7 @@ public class analyseBolt extends BaseBasicBolt {
 
     @Override
     public void declareOutputFields(OutputFieldsDeclarer outputFieldsDeclarer) {
-        outputFieldsDeclarer.declare(new Fields("result","entrust"));
+        outputFieldsDeclarer.declare(new Fields("result"));
 
     }
 }

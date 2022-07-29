@@ -28,7 +28,7 @@ public class kafkaSpout extends BaseRichSpout {
         int number = 1;
         Result result = new Result();
 
-        File file = new File(kafkaSpout.class.getClassLoader().getResource("entrustData.json").getFile());
+        File file = new File(kafkaSpout.class.getClassLoader().getResource("dataTest.json").getFile());
         String data = "";
         try {
             data = FileUtils.readFileToString(file, "utf-8");

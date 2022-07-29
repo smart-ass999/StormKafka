@@ -1,5 +1,8 @@
 import org.apache.storm.LocalCluster;
 import org.apache.storm.StormSubmitter;
+import org.apache.storm.generated.AlreadyAliveException;
+import org.apache.storm.generated.AuthorizationException;
+import org.apache.storm.generated.InvalidTopologyException;
 import org.apache.storm.generated.StormTopology;
 import org.apache.storm.topology.TopologyBuilder;
 import org.apache.storm.Config;
@@ -15,10 +18,11 @@ public class remoteTest {
         topologyBuilder.setSpout("kafkaSpout",new kafkaSpout());
         topologyBuilder.setBolt("ParserBolt", new ParserBolt()).shuffleGrouping("kafkaSpout");
         topologyBuilder.setBolt("analyseBolt", new analyseBolt()).shuffleGrouping("ParserBolt");
-        topologyBuilder.setBolt("dataBaseBolt", new dataBaseBolt()).shuffleGrouping("analyseBolt");
+        //topologyBuilder.setBolt("dataBaseBolt", new dataBaseBolt()).shuffleGrouping("analyseBolt");
         StormTopology topology = topologyBuilder.createTopology();
         //在本地提交
         localSubmit(topology);
+        //remoteSubmit(topology,"Test");
 
 
     }
@@ -29,20 +33,26 @@ public class remoteTest {
         LocalCluster localCluster = new LocalCluster();
         localCluster.submitTopology("numberTopology",conf,topology);
     }
+    //jar包提交
+    public static void jarSubmit(StormTopology topology,String topoName) throws AuthorizationException, InvalidTopologyException, AlreadyAliveException {
+        Config conf = new Config();
+        StormSubmitter.submitTopologyAs(topoName,conf,topology,null,null,"root");
+
+    }
     //远程提交入口，目前仍在开发中
     public static void remoteSubmit(StormTopology topology, String Name) throws Exception{
         Config conf = new Config();
-        conf.put(Config.NIMBUS_SEEDS, Collections.singletonList("124.221.196.162"));
+        conf.put(Config.NIMBUS_SEEDS, Collections.singletonList("VM-4-13-centos"));
         conf.put(Config.NIMBUS_THRIFT_PORT, 6627);
-        conf.put(Config.STORM_ZOOKEEPER_SERVERS,Collections.singletonList("124.221.196.162"));
+        conf.put(Config.STORM_ZOOKEEPER_SERVERS,Collections.singletonList("VM-4-13-centos"));
         conf.put(Config.STORM_ZOOKEEPER_PORT,2181);
         conf.put(Config.TASK_HEARTBEAT_FREQUENCY_SECS,10000);
         conf.setDebug(false);
         conf.setNumAckers(1);
         conf.setMaxTaskParallelism(10);
-        StormSubmitter.submitTopology(Name, conf, topology);
-
-
+        String jarPath = "E:\\StormKafka\\out\\StormKafka_jar\\StormKafka.jar";
+        System.setProperty("storm.jar",jarPath);
+        StormSubmitter.submitTopologyAs(Name, conf, topology, null, null, "root");
 
     }
 
