@@ -9,16 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da571aa3-a259-4e31-8957-76c43168b3d6" name="Changes" comment="修改了变量名，增加了json格式范例">
-      <change afterPath="$PROJECT_DIR$/src/main/java/myKafka/CustomConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/myKafka/CustomProducerCallbackJSON.java" afterDir="false" />
+    <list default="true" id="da571aa3-a259-4e31-8957-76c43168b3d6" name="Changes" comment="增加了kafka远程连接模块，引入了gson依赖，用于处理json数据">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StormKafka.iml" beforeDir="false" afterPath="$PROJECT_DIR$/StormKafka.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ParserBolt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ParserBolt.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/analyseBolt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/analyseBolt.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dataBaseBolt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataBaseBolt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kafkaSpout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kafkaSpout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myJDBC/Init.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myJDBC/Entrust.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myJDBC/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myJDBC/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myJDBC/myUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myJDBC/myUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myKafka/CustomProducerCallbackJSON.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myKafka/CustomProducerCallbackJSON.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/resultData.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/resultData.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +96,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.remoteTest">
+  <component name="RunManager" selected="JUnit.myUtils.getEntrustJson">
     <configuration name="remoteTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="remoteTest" />
       <module name="StormKafka" />
@@ -153,7 +152,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="myUtils.Select" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="myUtils.getEntrustJson" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="StormKafka" />
       <extension name="coverage">
         <pattern>
@@ -163,7 +162,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="myJDBC" />
       <option name="MAIN_CLASS_NAME" value="myJDBC.myUtils" />
-      <option name="METHOD_NAME" value="Select" />
+      <option name="METHOD_NAME" value="getEntrustJson" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -182,11 +181,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.myUtils.getEntrustJson" />
+        <item itemvalue="JUnit.CustomProducerCallbackJSON.producerStart" />
         <item itemvalue="Application.remoteTest" />
         <item itemvalue="JUnit.CustomConsumer.consumerStart" />
-        <item itemvalue="JUnit.CustomProducerCallbackJSON.producerStart" />
         <item itemvalue="JUnit.myUtils.InsertInit" />
-        <item itemvalue="JUnit.myUtils.Select" />
       </list>
     </recent_temporary>
   </component>
@@ -216,7 +215,9 @@
       <workItem from="1658881360327" duration="11953000" />
       <workItem from="1658903886007" duration="10229000" />
       <workItem from="1658928800363" duration="2050000" />
-      <workItem from="1658990532772" duration="6683000" />
+      <workItem from="1658990532772" duration="8007000" />
+      <workItem from="1659011125686" duration="3179000" />
+      <workItem from="1659055180435" duration="4148000" />
     </task>
     <task id="LOCAL-00001" summary="编写了JDBC模块，但没有并入到storm部分">
       <created>1658894938667</created>
@@ -281,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658914234263</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="增加了kafka远程连接模块，引入了gson依赖，用于处理json数据">
+      <created>1659000329482</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1659000329482</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -314,7 +322,8 @@
     <MESSAGE value="编写了JDBC模块，但没有并入到storm部分" />
     <MESSAGE value="增加了一些注释" />
     <MESSAGE value="修改了变量名，增加了json格式范例" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改了变量名，增加了json格式范例" />
+    <MESSAGE value="增加了kafka远程连接模块，引入了gson依赖，用于处理json数据" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加了kafka远程连接模块，引入了gson依赖，用于处理json数据" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

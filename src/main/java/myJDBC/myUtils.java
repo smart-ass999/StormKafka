@@ -1,5 +1,8 @@
 package myJDBC;
 
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
+import org.apache.storm.shade.org.apache.commons.io.FileUtils;
 import org.junit.Test;
 
 import java.io.*;
@@ -36,7 +39,7 @@ public class myUtils {
 
     }
     //插入原始数据
-    public static void InsertInit(Init init) throws Exception {
+    public static void InsertEntrust(Entrust init) throws Exception {
         Connection conn = getConnection();
         String insertSQL = "insert into entrust values ("+"\'"+init.entrust_date+"\'"+","+"\'"+init.entrust_time+"\'"+","+"\'"+init.market_sector+"\'"+","+"\'"+init.entrust_account+"\'"+","+"\'"+init.stock_symbol+"\'"+","+"\'"+init.entrust_id+"\'"+","+"\'"+init.entrust_behavior+"\'"+","+"\'"+init.entrust_state+"\'"+","+"\'"+init.entrust_count+"\'"+","+"\'"+init.entrust_prise+"\'"+","+"\'"+init.entrust_amount+"\'"+")";
         Statement st = conn.createStatement();
@@ -53,5 +56,17 @@ public class myUtils {
         if(resultSet.next())
             System.out.println(resultSet.getString("stock_symbol"));
         conn.close();
+    }
+    public static Entrust getEntrustObject(String entrustString)
+    {
+        Gson gson = new Gson();
+        Entrust entrustObject = gson.fromJson(entrustString, Entrust.class);
+        return entrustObject;
+    }
+    public static Result getResultObject(String resultString)
+    {
+        Gson gson = new Gson();
+        Result resultObject = gson.fromJson(resultString, Result.class);
+        return resultObject;
     }
 }
