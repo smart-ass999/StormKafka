@@ -9,11 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da571aa3-a259-4e31-8957-76c43168b3d6" name="Changes" comment="实现了云端提交功能，完善了数据流获取功能">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dataBaseBolt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataBaseBolt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kafkaSpout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kafkaSpout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/myJDBC/myUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myJDBC/myUtils.java" afterDir="false" />
+    <list default="true" id="da571aa3-a259-4e31-8957-76c43168b3d6" name="Changes" comment="删除了不必要的代码，优化了数据库接口结构">
       <change beforePath="$PROJECT_DIR$/src/main/java/remoteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/remoteTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -218,7 +214,7 @@
       <workItem from="1659055180435" duration="11534000" />
       <workItem from="1659077689455" duration="12066000" />
       <workItem from="1659095468307" duration="2377000" />
-      <workItem from="1659338401805" duration="6634000" />
+      <workItem from="1659338401805" duration="7187000" />
     </task>
     <task id="LOCAL-00001" summary="编写了JDBC模块，但没有并入到storm部分">
       <created>1658894938667</created>
@@ -304,7 +300,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659088410075</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="删除了不必要的代码，优化了数据库接口结构">
+      <created>1659345784845</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1659345784845</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -340,7 +343,8 @@
     <MESSAGE value="增加了kafka远程连接模块，引入了gson依赖，用于处理json数据" />
     <MESSAGE value="在JDBC部分增加了两个读取JSON字符串的方法" />
     <MESSAGE value="实现了云端提交功能，完善了数据流获取功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="实现了云端提交功能，完善了数据流获取功能" />
+    <MESSAGE value="删除了不必要的代码，优化了数据库接口结构" />
+    <option name="LAST_COMMIT_MESSAGE" value="删除了不必要的代码，优化了数据库接口结构" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -21,8 +21,8 @@ public class remoteTest {
         //topologyBuilder.setBolt("dataBaseBolt", new dataBaseBolt()).shuffleGrouping("analyseBolt");
         StormTopology topology = topologyBuilder.createTopology();
         //在本地提交
-        //localSubmit(topology);
-        remoteSubmit(topology,"Test");
+        localSubmit(topology);
+        //remoteSubmit(topology,"Test");
 
 
     }
