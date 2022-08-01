@@ -1,6 +1,6 @@
 package myJDBC;
 //定义原始数据对象
-public class Init {
+public class Entrust {
     String entrust_date = "未知";
     String entrust_time = "未知";
     String market_sector = "未知";

@@ -9,16 +9,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da571aa3-a259-4e31-8957-76c43168b3d6" name="Changes" comment="修改了变量名，增加了json格式范例">
-      <change afterPath="$PROJECT_DIR$/src/main/java/myKafka/CustomConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/myKafka/CustomProducerCallbackJSON.java" afterDir="false" />
+    <list default="true" id="da571aa3-a259-4e31-8957-76c43168b3d6" name="Changes" comment="在JDBC部分增加了两个读取JSON字符串的方法">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_log4j_over_slf4j_1_6_6.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/StormKafka.iml" beforeDir="false" afterPath="$PROJECT_DIR$/StormKafka.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ParserBolt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ParserBolt.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/analyseBolt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/analyseBolt.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dataBaseBolt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataBaseBolt.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/kafkaSpout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kafkaSpout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myJDBC/myUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myJDBC/myUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/remoteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/remoteTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +75,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/myKafka" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -87,6 +87,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\StormKafka\src\main\resources" />
       <recent name="E:\StormKafka\src\main\java\myKafka" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -137,7 +138,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="myUtils.InsertInit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="myUtils.getEntrustJson" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="StormKafka" />
       <extension name="coverage">
         <pattern>
@@ -147,13 +148,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="myJDBC" />
       <option name="MAIN_CLASS_NAME" value="myJDBC.myUtils" />
-      <option name="METHOD_NAME" value="InsertInit" />
+      <option name="METHOD_NAME" value="getEntrustJson" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="myUtils.Select" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="myUtils.getResult" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="StormKafka" />
       <extension name="coverage">
         <pattern>
@@ -163,7 +164,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="myJDBC" />
       <option name="MAIN_CLASS_NAME" value="myJDBC.myUtils" />
-      <option name="METHOD_NAME" value="Select" />
+      <option name="METHOD_NAME" value="getResult" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -183,10 +184,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.remoteTest" />
-        <item itemvalue="JUnit.CustomConsumer.consumerStart" />
+        <item itemvalue="JUnit.myUtils.getResult" />
+        <item itemvalue="JUnit.myUtils.getEntrustJson" />
         <item itemvalue="JUnit.CustomProducerCallbackJSON.producerStart" />
-        <item itemvalue="JUnit.myUtils.InsertInit" />
-        <item itemvalue="JUnit.myUtils.Select" />
+        <item itemvalue="JUnit.CustomConsumer.consumerStart" />
       </list>
     </recent_temporary>
   </component>
@@ -216,7 +217,10 @@
       <workItem from="1658881360327" duration="11953000" />
       <workItem from="1658903886007" duration="10229000" />
       <workItem from="1658928800363" duration="2050000" />
-      <workItem from="1658990532772" duration="6683000" />
+      <workItem from="1658990532772" duration="8007000" />
+      <workItem from="1659011125686" duration="3179000" />
+      <workItem from="1659055180435" duration="11534000" />
+      <workItem from="1659077689455" duration="9471000" />
     </task>
     <task id="LOCAL-00001" summary="编写了JDBC模块，但没有并入到storm部分">
       <created>1658894938667</created>
@@ -281,7 +285,21 @@
       <option name="project" value="LOCAL" />
       <updated>1658914234263</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="增加了kafka远程连接模块，引入了gson依赖，用于处理json数据">
+      <created>1659000329482</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1659000329482</updated>
+    </task>
+    <task id="LOCAL-00011" summary="在JDBC部分增加了两个读取JSON字符串的方法">
+      <created>1659059511066</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1659059511066</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -314,7 +332,9 @@
     <MESSAGE value="编写了JDBC模块，但没有并入到storm部分" />
     <MESSAGE value="增加了一些注释" />
     <MESSAGE value="修改了变量名，增加了json格式范例" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改了变量名，增加了json格式范例" />
+    <MESSAGE value="增加了kafka远程连接模块，引入了gson依赖，用于处理json数据" />
+    <MESSAGE value="在JDBC部分增加了两个读取JSON字符串的方法" />
+    <option name="LAST_COMMIT_MESSAGE" value="在JDBC部分增加了两个读取JSON字符串的方法" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

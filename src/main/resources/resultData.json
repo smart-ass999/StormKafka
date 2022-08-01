@@ -1,4 +1,4 @@
-{
+[{
   "exception_scenarios" : "未知",
   "exception_date" : "未知",
   "exception_time" : "未知",
@@ -6,5 +6,14 @@
   "entrust_account" : "未知",
   "stock_symbol" : "未知",
   "description" : "未知",
-  "risk_level" : "未知"
-}
+  "risk_level" : "未知"},
+  {
+    "exception_scenarios" : "未知",
+    "exception_date" : "未知",
+    "exception_time" : "未知",
+    "market_sector" : "未知",
+    "entrust_account" : "未知",
+    "stock_symbol" : "未知",
+    "description" : "未知",
+    "risk_level" : "未知"}
+]

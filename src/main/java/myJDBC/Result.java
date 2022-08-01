@@ -11,4 +11,20 @@ public class Result {
         String description = "未知";
         String risk_level = "未知";
 
+        public String getException_scenarios() {
+                return exception_scenarios;
+        }
+
+        public void setException_scenarios(String exception_scenarios) {
+                this.exception_scenarios = exception_scenarios;
+        }
+
+        public String getException_time() {
+                return exception_time;
+        }
+
+        public void setException_time(String exception_time) {
+                this.exception_time = exception_time;
+        }
+
 }

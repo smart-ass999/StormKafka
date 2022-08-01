@@ -1,12 +1,17 @@
 package myJDBC;
 
+import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+import org.apache.storm.shade.com.google.common.reflect.TypeToken;
+import org.apache.storm.shade.org.apache.commons.io.FileUtils;
 import org.junit.Test;
 
 import java.io.*;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.lang.reflect.Type;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 //数据库工具类，所有的类均已经过测试
 public class myUtils {
@@ -36,7 +41,7 @@ public class myUtils {
 
     }
     //插入原始数据
-    public static void InsertInit(Init init) throws Exception {
+    public static void InsertEntrust(Entrust init) throws Exception {
         Connection conn = getConnection();
         String insertSQL = "insert into entrust values ("+"\'"+init.entrust_date+"\'"+","+"\'"+init.entrust_time+"\'"+","+"\'"+init.market_sector+"\'"+","+"\'"+init.entrust_account+"\'"+","+"\'"+init.stock_symbol+"\'"+","+"\'"+init.entrust_id+"\'"+","+"\'"+init.entrust_behavior+"\'"+","+"\'"+init.entrust_state+"\'"+","+"\'"+init.entrust_count+"\'"+","+"\'"+init.entrust_prise+"\'"+","+"\'"+init.entrust_amount+"\'"+")";
         Statement st = conn.createStatement();
@@ -54,4 +59,40 @@ public class myUtils {
             System.out.println(resultSet.getString("stock_symbol"));
         conn.close();
     }
+    public static Entrust getEntrustObject(String entrustString)
+    {
+        Gson gson = new Gson();
+        Entrust entrustObject = gson.fromJson(entrustString, Entrust.class);
+        return entrustObject;
+    }
+    public static Result getResultObject(String resultString)
+    {
+        Gson gson = new Gson();
+        Result resultObject = gson.fromJson(resultString, Result.class);
+        return resultObject;
+    }
+    public void getResult1()
+    {
+        File file = new File(myUtils.class.getClassLoader().getResource("dataTest.json").getFile());
+        String data = "";
+        try {
+            data = FileUtils.readFileToString(file, "utf-8");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Gson gson = new Gson();
+        Type type = new TypeToken<List<Entrust>>(){}.getType();
+        List<Entrust> entrustsList = gson.fromJson(data, type);
+        System.out.println(entrustsList.get(1).entrust_date);
+
+    }
+    public List<Entrust> getResult(String data)
+    {
+        Gson gson = new Gson();
+        Type type = new TypeToken<List<Entrust>>(){}.getType();
+        List<Entrust> entrustsList = gson.fromJson(data, type);
+        return entrustsList;
+
+    }
+
 }

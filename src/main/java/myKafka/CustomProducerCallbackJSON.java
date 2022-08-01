@@ -24,7 +24,7 @@ public class CustomProducerCallbackJSON {
         // 2 发送数据
         for (int i = 0; i < 5; i++) {
             String order = new String("111");
-            ProducerRecord<Object, String> record = new ProducerRecord<>("remoteTest", order);
+            ProducerRecord<Object, String> record = new ProducerRecord<>("Test", order);
             kafkaProducer.send(record, new Callback() {
                 @Override
                 public void onCompletion(RecordMetadata recordMetadata, Exception e) {
