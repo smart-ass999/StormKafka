@@ -1,6 +1,7 @@
 import com.google.gson.JsonArray;
 import com.google.gson.JsonParser;
 import myJDBC.Result;
+import myJDBC.myUtils;
 import org.apache.storm.shade.org.apache.commons.io.FileUtils;
 import org.apache.storm.spout.SpoutOutputCollector;
 import org.apache.storm.task.TopologyContext;
@@ -37,11 +38,13 @@ public class kafkaSpout extends BaseRichSpout {
         }
         //发送数据：1
         this.spoutOutputCollector.emit(new Values(data));
+
         try {
+            //myUtils.InsertEntrustList(data);
             System.out.println("生成数据" + data);
             //五秒发送一次
             Thread.sleep(10000);
-        } catch (InterruptedException e) {
+        }  catch (Exception e) {
             e.printStackTrace();
         }
 

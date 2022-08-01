@@ -17,14 +17,9 @@ public class dataBaseBolt extends BaseBasicBolt {
     @Override
     public void execute(Tuple tuple, BasicOutputCollector basicOutputCollector) {
         String resultString = tuple.getStringByField("result");
+
         try {
-            Gson gson = new Gson();
-            Type type = new TypeToken<List<Entrust>>(){}.getType();
-            List<Entrust> entrustsList = gson.fromJson(resultString, type);
-            for(int i = 0;i < entrustsList.size();i++)
-            {
-            myUtils.InsertEntrust(entrustsList.get(i));
-            }
+            myUtils.InsertReultList(resultString);
         } catch (Exception e) {
             e.printStackTrace();
         }

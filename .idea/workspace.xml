@@ -9,12 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da571aa3-a259-4e31-8957-76c43168b3d6" name="Changes" comment="在JDBC部分增加了两个读取JSON字符串的方法">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_log4j_over_slf4j_1_6_6.xml" beforeDir="false" />
+    <list default="true" id="da571aa3-a259-4e31-8957-76c43168b3d6" name="Changes" comment="实现了云端提交功能，完善了数据流获取功能">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StormKafka.iml" beforeDir="false" afterPath="$PROJECT_DIR$/StormKafka.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/analyseBolt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/analyseBolt.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dataBaseBolt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataBaseBolt.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/kafkaSpout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kafkaSpout.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/myJDBC/myUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myJDBC/myUtils.java" afterDir="false" />
@@ -220,7 +216,9 @@
       <workItem from="1658990532772" duration="8007000" />
       <workItem from="1659011125686" duration="3179000" />
       <workItem from="1659055180435" duration="11534000" />
-      <workItem from="1659077689455" duration="9471000" />
+      <workItem from="1659077689455" duration="12066000" />
+      <workItem from="1659095468307" duration="2377000" />
+      <workItem from="1659338401805" duration="6634000" />
     </task>
     <task id="LOCAL-00001" summary="编写了JDBC模块，但没有并入到storm部分">
       <created>1658894938667</created>
@@ -299,7 +297,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659059511066</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="实现了云端提交功能，完善了数据流获取功能">
+      <created>1659088410075</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1659088410075</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,7 +339,8 @@
     <MESSAGE value="修改了变量名，增加了json格式范例" />
     <MESSAGE value="增加了kafka远程连接模块，引入了gson依赖，用于处理json数据" />
     <MESSAGE value="在JDBC部分增加了两个读取JSON字符串的方法" />
-    <option name="LAST_COMMIT_MESSAGE" value="在JDBC部分增加了两个读取JSON字符串的方法" />
+    <MESSAGE value="实现了云端提交功能，完善了数据流获取功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="实现了云端提交功能，完善了数据流获取功能" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
