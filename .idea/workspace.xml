@@ -9,8 +9,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da571aa3-a259-4e31-8957-76c43168b3d6" name="Changes" comment="删除了不必要的代码，优化了数据库接口结构">
+    <list default="true" id="da571aa3-a259-4e31-8957-76c43168b3d6" name="Changes" comment="默认本地运行">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_9_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_16_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_json_simple_json_simple_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_curator_curator_client_2_12_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_curator_curator_framework_2_12_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_storm_storm_kafka_1_1_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StormKafka.iml" beforeDir="false" afterPath="$PROJECT_DIR$/StormKafka.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ParserBolt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ParserBolt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myKafka/CustomConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myKafka/CustomConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myKafka/CustomProducerCallbackJSON.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myKafka/jsonProducer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/remoteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/remoteTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/entrustData.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/entrustData.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +81,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -114,7 +130,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomProducerCallbackJSON.producerStart" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CustomProducerCallbackJSON" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="StormKafka" />
       <extension name="coverage">
         <pattern>
@@ -124,8 +140,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="myKafka" />
       <option name="MAIN_CLASS_NAME" value="myKafka.CustomProducerCallbackJSON" />
-      <option name="METHOD_NAME" value="producerStart" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -176,10 +191,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.remoteTest" />
+        <item itemvalue="JUnit.CustomConsumer.consumerStart" />
+        <item itemvalue="JUnit.CustomProducerCallbackJSON" />
         <item itemvalue="JUnit.myUtils.getResult" />
         <item itemvalue="JUnit.myUtils.getEntrustJson" />
-        <item itemvalue="JUnit.CustomProducerCallbackJSON.producerStart" />
-        <item itemvalue="JUnit.CustomConsumer.consumerStart" />
       </list>
     </recent_temporary>
   </component>
@@ -214,7 +229,8 @@
       <workItem from="1659055180435" duration="11534000" />
       <workItem from="1659077689455" duration="12066000" />
       <workItem from="1659095468307" duration="2377000" />
-      <workItem from="1659338401805" duration="7187000" />
+      <workItem from="1659338401805" duration="9208000" />
+      <workItem from="1659361775507" duration="21590000" />
     </task>
     <task id="LOCAL-00001" summary="编写了JDBC模块，但没有并入到storm部分">
       <created>1658894938667</created>
@@ -307,7 +323,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659345784845</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="默认本地运行">
+      <created>1659346326244</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1659346326244</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,7 +367,8 @@
     <MESSAGE value="在JDBC部分增加了两个读取JSON字符串的方法" />
     <MESSAGE value="实现了云端提交功能，完善了数据流获取功能" />
     <MESSAGE value="删除了不必要的代码，优化了数据库接口结构" />
-    <option name="LAST_COMMIT_MESSAGE" value="删除了不必要的代码，优化了数据库接口结构" />
+    <MESSAGE value="默认本地运行" />
+    <option name="LAST_COMMIT_MESSAGE" value="默认本地运行" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

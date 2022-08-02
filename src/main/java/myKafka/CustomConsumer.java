@@ -18,21 +18,21 @@ public class CustomConsumer {
         Properties properties = new Properties();
 
         //连接
-        properties.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG,"124.221.196.162:9092");
+        properties.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG,"VM-4-13-centos:9092");
 
         //反序列化
         properties.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
         properties.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG,StringDeserializer.class);
 
         //配置消费者组ID
-        properties.put(ConsumerConfig.GROUP_ID_CONFIG,"remoteTest");
+        properties.put(ConsumerConfig.GROUP_ID_CONFIG,"r" +"rTest");
 
         //1 创建消费者
         KafkaConsumer<String, String> kafkaConsumer = new KafkaConsumer<>(properties);
 
         //2订阅主题
         ArrayList<String> topics = new ArrayList<>();
-        topics.add("remoteTest");
+        topics.add("Test");
         kafkaConsumer.subscribe(topics);
         //3消费数据
         while(true){

@@ -11,11 +11,10 @@ public class ParserBolt extends BaseBasicBolt {
     @Override
     public void execute(Tuple tuple, BasicOutputCollector basicOutputCollector) {
         //根据之前Spout定义的数据域读取数据
-        System.out.println("处理数据" + tuple.getStringByField("result"));
+        System.out.println("处理数据" + tuple.getString(0));
         this.basicOutputCollector = basicOutputCollector;
         //发送给下一个Bolt
-        this.basicOutputCollector.emit(new Values(tuple.getStringByField("result")));
-
+        this.basicOutputCollector.emit(new Values(tuple.getString(0)));
 
     }
 
