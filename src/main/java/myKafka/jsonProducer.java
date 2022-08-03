@@ -23,7 +23,7 @@ public class jsonProducer{
         // 2 发送数据
         for (int i = 5; i < 10; i++) {
             String order = "生产者" + i;
-            ProducerRecord<Object, String> record = new ProducerRecord<>("Test", order);
+            ProducerRecord<Object, String> record = new ProducerRecord<>("Test4", order);
             kafkaProducer.send(record, new Callback() {
                 @Override
                 public void onCompletion(RecordMetadata recordMetadata, Exception e) {

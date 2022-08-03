@@ -9,23 +9,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da571aa3-a259-4e31-8957-76c43168b3d6" name="Changes" comment="默认本地运行">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_16_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_json_simple_json_simple_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_curator_curator_client_2_12_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_curator_curator_framework_2_12_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_storm_storm_kafka_1_1_0.xml" afterDir="false" />
+    <list default="true" id="da571aa3-a259-4e31-8957-76c43168b3d6" name="Changes" comment="加入了kafkaspout">
+      <change afterPath="$PROJECT_DIR$/src/main/java/myJDBC/JDBCUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/myStorm/analyseBolt.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StormKafka.iml" beforeDir="false" afterPath="$PROJECT_DIR$/StormKafka.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ParserBolt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ParserBolt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/myKafka/CustomConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myKafka/CustomConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/myKafka/CustomProducerCallbackJSON.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myKafka/jsonProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ParserBolt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myStorm/ParserBolt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/analyseBolt.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dataBaseBolt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myStorm/dataBaseBolt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kafkaSpout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myStorm/kafkaSpout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myJDBC/Entrust.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myJDBC/Entrust.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myJDBC/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myJDBC/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myJDBC/myUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myKafka/jsonProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myKafka/jsonProducer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/remoteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/remoteTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/entrustData.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/entrustData.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +79,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/myJDBC" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -95,6 +91,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\StormKafka\src\main\java\myJDBC" />
       <recent name="E:\StormKafka\src\main\resources" />
       <recent name="E:\StormKafka\src\main\java\myKafka" />
     </key>
@@ -130,22 +127,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomProducerCallbackJSON" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="StormKafka" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="myKafka.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="myKafka" />
-      <option name="MAIN_CLASS_NAME" value="myKafka.CustomProducerCallbackJSON" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="myUtils.getEntrustJson" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="functionTest.CounBy_Userid_stockid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="StormKafka" />
       <extension name="coverage">
         <pattern>
@@ -154,14 +136,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="myJDBC" />
-      <option name="MAIN_CLASS_NAME" value="myJDBC.myUtils" />
-      <option name="METHOD_NAME" value="getEntrustJson" />
+      <option name="MAIN_CLASS_NAME" value="myJDBC.functionTest" />
+      <option name="METHOD_NAME" value="CounBy_Userid_stockid" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="myUtils.getResult" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="functionTest.CounBy_Userid_stockid_time" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="StormKafka" />
       <extension name="coverage">
         <pattern>
@@ -170,8 +152,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="myJDBC" />
-      <option name="MAIN_CLASS_NAME" value="myJDBC.myUtils" />
-      <option name="METHOD_NAME" value="getResult" />
+      <option name="MAIN_CLASS_NAME" value="myJDBC.functionTest" />
+      <option name="METHOD_NAME" value="CounBy_Userid_stockid_time" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="functionTest.selectBy_Userid_stockid_date1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StormKafka" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="myJDBC.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="myJDBC" />
+      <option name="MAIN_CLASS_NAME" value="myJDBC.functionTest" />
+      <option name="METHOD_NAME" value="selectBy_Userid_stockid_date1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -191,10 +189,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.remoteTest" />
+        <item itemvalue="JUnit.functionTest.selectBy_Userid_stockid_date1" />
+        <item itemvalue="JUnit.functionTest.CounBy_Userid_stockid_time" />
+        <item itemvalue="JUnit.functionTest.CounBy_Userid_stockid" />
         <item itemvalue="JUnit.CustomConsumer.consumerStart" />
-        <item itemvalue="JUnit.CustomProducerCallbackJSON" />
-        <item itemvalue="JUnit.myUtils.getResult" />
-        <item itemvalue="JUnit.myUtils.getEntrustJson" />
       </list>
     </recent_temporary>
   </component>
@@ -230,7 +228,10 @@
       <workItem from="1659077689455" duration="12066000" />
       <workItem from="1659095468307" duration="2377000" />
       <workItem from="1659338401805" duration="9208000" />
-      <workItem from="1659361775507" duration="21590000" />
+      <workItem from="1659361775507" duration="21950000" />
+      <workItem from="1659445312923" duration="7214000" />
+      <workItem from="1659488004432" duration="12973000" />
+      <workItem from="1659508481375" duration="11582000" />
     </task>
     <task id="LOCAL-00001" summary="编写了JDBC模块，但没有并入到storm部分">
       <created>1658894938667</created>
@@ -330,7 +331,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659346326244</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="加入了kafkaspout">
+      <created>1659443153363</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1659443153363</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -368,7 +376,8 @@
     <MESSAGE value="实现了云端提交功能，完善了数据流获取功能" />
     <MESSAGE value="删除了不必要的代码，优化了数据库接口结构" />
     <MESSAGE value="默认本地运行" />
-    <option name="LAST_COMMIT_MESSAGE" value="默认本地运行" />
+    <MESSAGE value="加入了kafkaspout" />
+    <option name="LAST_COMMIT_MESSAGE" value="加入了kafkaspout" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

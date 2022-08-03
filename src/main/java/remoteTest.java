@@ -1,3 +1,6 @@
+import myStorm.ParserBolt;
+import myStorm.analyseBolt;
+import myStorm.kafkaSpout;
 import org.apache.storm.LocalCluster;
 import org.apache.storm.StormSubmitter;
 import org.apache.storm.generated.AlreadyAliveException;
@@ -5,47 +8,28 @@ import org.apache.storm.generated.AuthorizationException;
 import org.apache.storm.generated.InvalidTopologyException;
 import org.apache.storm.generated.StormTopology;
 import org.apache.storm.kafka.*;
-import org.apache.storm.kafka.bolt.KafkaBolt;
-import org.apache.storm.spout.SchemeAsMultiScheme;
 import org.apache.storm.topology.TopologyBuilder;
 import org.apache.storm.Config;
 
 import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
-import myKafka.*;
+
+import static myKafka.setKafka.setConfig;
+import static myKafka.setKafka.setSpoutConfig;
+
 //主类
 public class remoteTest {
     //主方法
     public static void main(String[] args) throws Exception {
         //以下为kafka设置
-        BrokerHosts brokerHosts =new ZkHosts("VM-4-13-centos:2181");
-        String zkRoot="";
-        String topic="Test";
-        String spoutId="kafkaSpout";
-        SpoutConfig spoutConfig = new SpoutConfig(brokerHosts,topic,zkRoot,spoutId);
-        spoutConfig.scheme = new SchemeAsMultiScheme(new StringScheme());
-        Config conf=new Config();
-        //不输出调试信息
-        conf.setDebug(false);
-        //设置一个spout task中处于pending状态的最大的tuples数量
-        conf.put(Config.TOPOLOGY_MAX_SPOUT_PENDING, 1);
-        Map<String, String> map=new HashMap<String,String>();
-        // 配置Kafka broker地址
-        map.put("metadata.broker.list", "VM-4-13-centos:9092");
-        // serializer.class为消息的序列化类
-        map.put("serializer.class", "kafka.serializer.StringEncoder");
-        conf.put("kafka.broker.properties", map);
-        // 配置KafkaBolt生成的topic
-        conf.put("topic", "receive");
+        SpoutConfig spoutConfig = setSpoutConfig();
+        Config conf = setConfig();
         //以下为storm拓扑构造
-
         TopologyBuilder topologyBuilder = new TopologyBuilder();
-        //构造spout，kafkaSpout()为spout具体实现，请打开kafkaSpout.java查看
-        topologyBuilder.setSpout("kafkaSpout",new KafkaSpout(spoutConfig),1);
+        //构造spout，myStorm.kafkaSpout()为spout具体实现，请打开kafkaSpout.java查看
+        topologyBuilder.setSpout("kafkaSpout",new kafkaSpout());
         topologyBuilder.setBolt("ParserBolt", new ParserBolt()).shuffleGrouping("kafkaSpout");
         topologyBuilder.setBolt("analyseBolt", new analyseBolt()).shuffleGrouping("ParserBolt");
-        //topologyBuilder.setBolt("dataBaseBolt", new dataBaseBolt()).shuffleGrouping("analyseBolt");
+        topologyBuilder.setBolt("dataBaseBolt", new myStorm.dataBaseBolt()).shuffleGrouping("analyseBolt");
         StormTopology topology = topologyBuilder.createTopology();
         //在本地提交
         localSubmit(topology, conf);

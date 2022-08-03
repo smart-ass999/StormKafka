@@ -1,7 +1,6 @@
-import com.google.gson.JsonArray;
-import com.google.gson.JsonParser;
+package myStorm;
+
 import myJDBC.Result;
-import myJDBC.myUtils;
 import org.apache.storm.shade.org.apache.commons.io.FileUtils;
 import org.apache.storm.spout.SpoutOutputCollector;
 import org.apache.storm.task.TopologyContext;
@@ -54,5 +53,9 @@ public class kafkaSpout extends BaseRichSpout {
     //定义数据域，用于为后面的Bolt读取数据
     public void declareOutputFields(OutputFieldsDeclarer outputFieldsDeclarer) {
         outputFieldsDeclarer.declare(new Fields("result"));
+    }
+
+    public void ack(Object msgId) {
+        super.ack(msgId);
     }
 }

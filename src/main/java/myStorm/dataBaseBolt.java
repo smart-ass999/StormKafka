@@ -1,3 +1,5 @@
+package myStorm;
+
 import com.google.gson.Gson;
 import myJDBC.*;
 import org.apache.storm.shade.com.google.common.reflect.TypeToken;
@@ -17,9 +19,9 @@ public class dataBaseBolt extends BaseBasicBolt {
     @Override
     public void execute(Tuple tuple, BasicOutputCollector basicOutputCollector) {
         String resultString = tuple.getStringByField("result");
-
+        System.out.println("存入结果数据" + resultString);
         try {
-            myUtils.InsertReultList(resultString);
+            //myUtils.InsertReultList(resultString);
         } catch (Exception e) {
             e.printStackTrace();
         }
