@@ -9,10 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da571aa3-a259-4e31-8957-76c43168b3d6" name="Changes" comment="对各模块进行整合，封装了各部分内部逻辑">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/remoteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/remoteTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="da571aa3-a259-4e31-8957-76c43168b3d6" name="Changes" comment="对各模块进行整合，封装了各部分内部逻辑" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -222,6 +219,7 @@
       <workItem from="1659445312923" duration="7214000" />
       <workItem from="1659488004432" duration="12973000" />
       <workItem from="1659508481375" duration="14733000" />
+      <workItem from="1659541685435" duration="312000" />
     </task>
     <task id="LOCAL-00001" summary="编写了JDBC模块，但没有并入到storm部分">
       <created>1658894938667</created>
@@ -335,7 +333,28 @@
       <option name="project" value="LOCAL" />
       <updated>1659523852287</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="对各模块进行整合，封装了各部分内部逻辑">
+      <created>1659541712268</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1659541712268</updated>
+    </task>
+    <task id="LOCAL-00018" summary="对各模块进行整合，封装了各部分内部逻辑">
+      <created>1659541810551</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1659541810551</updated>
+    </task>
+    <task id="LOCAL-00019" summary="对各模块进行整合，封装了各部分内部逻辑">
+      <created>1659541845730</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1659541845730</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
