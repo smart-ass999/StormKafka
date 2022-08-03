@@ -9,18 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da571aa3-a259-4e31-8957-76c43168b3d6" name="Changes" comment="加入了kafkaspout">
-      <change afterPath="$PROJECT_DIR$/src/main/java/myJDBC/JDBCUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/myStorm/analyseBolt.java" afterDir="false" />
+    <list default="true" id="da571aa3-a259-4e31-8957-76c43168b3d6" name="Changes" comment="对各模块进行整合，封装了各部分内部逻辑">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ParserBolt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myStorm/ParserBolt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/analyseBolt.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dataBaseBolt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myStorm/dataBaseBolt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kafkaSpout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myStorm/kafkaSpout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/myJDBC/Entrust.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myJDBC/Entrust.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/myJDBC/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myJDBC/Result.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/myJDBC/myUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/myKafka/jsonProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myKafka/jsonProducer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/remoteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/remoteTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -231,7 +221,7 @@
       <workItem from="1659361775507" duration="21950000" />
       <workItem from="1659445312923" duration="7214000" />
       <workItem from="1659488004432" duration="12973000" />
-      <workItem from="1659508481375" duration="11582000" />
+      <workItem from="1659508481375" duration="14733000" />
     </task>
     <task id="LOCAL-00001" summary="编写了JDBC模块，但没有并入到storm部分">
       <created>1658894938667</created>
@@ -338,7 +328,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659443153363</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="对各模块进行整合，封装了各部分内部逻辑">
+      <created>1659523852287</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1659523852287</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -377,7 +374,8 @@
     <MESSAGE value="删除了不必要的代码，优化了数据库接口结构" />
     <MESSAGE value="默认本地运行" />
     <MESSAGE value="加入了kafkaspout" />
-    <option name="LAST_COMMIT_MESSAGE" value="加入了kafkaspout" />
+    <MESSAGE value="对各模块进行整合，封装了各部分内部逻辑" />
+    <option name="LAST_COMMIT_MESSAGE" value="对各模块进行整合，封装了各部分内部逻辑" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

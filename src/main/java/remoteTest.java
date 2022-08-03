@@ -44,12 +44,6 @@ public class remoteTest {
         LocalCluster localCluster = new LocalCluster();
         localCluster.submitTopology("numberTopology",conf,topology);
     }
-    //jar包提交
-    public static void jarSubmit(StormTopology topology,String topoName) throws AuthorizationException, InvalidTopologyException, AlreadyAliveException {
-        Config conf = new Config();
-        StormSubmitter.submitTopologyAs(topoName,conf,topology,null,null,"root");
-
-    }
     //远程提交入口，目前仍在开发中
     public static void remoteSubmit(StormTopology topology, String Name) throws Exception{
         Config conf = new Config();
