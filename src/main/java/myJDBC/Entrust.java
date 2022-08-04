@@ -74,12 +74,12 @@ public class Entrust {
         this.entrust_count = entrust_count;
     }
 
-    public String getEntrust_prise() {
-        return entrust_prise;
+    public String getEntrust_price() {
+        return entrust_price;
     }
 
-    public void setEntrust_prise(String entrust_prise) {
-        this.entrust_prise = entrust_prise;
+    public void setEntrust_price(String entrust_price) {
+        this.entrust_price = entrust_price;
     }
 
     public String getEntrust_amount() {
@@ -102,7 +102,7 @@ public class Entrust {
                 ", entrust_behavior='" + entrust_behavior + '\'' +
                 ", entrust_state='" + entrust_state + '\'' +
                 ", entrust_count='" + entrust_count + '\'' +
-                ", entrust_prise='" + entrust_prise + '\'' +
+                ", entrust_prise='" + entrust_price + '\'' +
                 ", entrust_amount='" + entrust_amount + '\'' +
                 '}';
     }
@@ -116,6 +116,6 @@ public class Entrust {
     private String entrust_behavior = "未知";
     private String entrust_state = "未知";
     private String entrust_count = "未知";
-    private String entrust_prise = "未知";
+    private String entrust_price = "未知";
     private String entrust_amount = "未知";
 }

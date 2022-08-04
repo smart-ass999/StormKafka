@@ -13,6 +13,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Map;
 
+import static myJDBC.JDBCUtils.InsertEntrustList;
+
 public class kafkaSpout extends BaseRichSpout {
     private SpoutOutputCollector spoutOutputCollector;
     private int number;
@@ -28,7 +30,7 @@ public class kafkaSpout extends BaseRichSpout {
         int number = 1;
         Result result = new Result();
 
-        File file = new File(kafkaSpout.class.getClassLoader().getResource("dataTest.json").getFile());
+        File file = new File(kafkaSpout.class.getClassLoader().getResource("data.json").getFile());
         String data = "";
         try {
             data = FileUtils.readFileToString(file, "utf-8");
@@ -39,10 +41,10 @@ public class kafkaSpout extends BaseRichSpout {
         this.spoutOutputCollector.emit(new Values(data));
 
         try {
-            //myUtils.InsertEntrustList(data);
+            InsertEntrustList(data);
             System.out.println("生成数据" + data);
             //五秒发送一次
-            Thread.sleep(10000);
+            Thread.sleep(20000);
         }  catch (Exception e) {
             e.printStackTrace();
         }

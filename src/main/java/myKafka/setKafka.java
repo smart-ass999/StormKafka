@@ -15,7 +15,7 @@ public class setKafka {
     {
         BrokerHosts brokerHosts =new ZkHosts("VM-4-13-centos:2181");
         String zkRoot="/offset";
-        String topic="Test4";
+        String topic="Test7";
         String spoutId="myStorm.kafkaSpout";
         SpoutConfig spoutConfig = new SpoutConfig(brokerHosts,topic,zkRoot,spoutId);
         spoutConfig.scheme = new SchemeAsMultiScheme(new StringScheme());

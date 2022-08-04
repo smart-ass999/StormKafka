@@ -1,11 +1,8 @@
+import myKafka.jsonProducer;
 import myStorm.ParserBolt;
 import myStorm.analyseBolt;
-import myStorm.kafkaSpout;
 import org.apache.storm.LocalCluster;
 import org.apache.storm.StormSubmitter;
-import org.apache.storm.generated.AlreadyAliveException;
-import org.apache.storm.generated.AuthorizationException;
-import org.apache.storm.generated.InvalidTopologyException;
 import org.apache.storm.generated.StormTopology;
 import org.apache.storm.kafka.*;
 import org.apache.storm.topology.TopologyBuilder;
@@ -17,7 +14,7 @@ import static myKafka.setKafka.setConfig;
 import static myKafka.setKafka.setSpoutConfig;
 
 //主类
-public class remoteTest {
+public class stormStart {
     //主方法
     public static void main(String[] args) throws Exception {
         //以下为kafka设置
@@ -26,14 +23,14 @@ public class remoteTest {
         //以下为storm拓扑构造
         TopologyBuilder topologyBuilder = new TopologyBuilder();
         //构造spout，myStorm.kafkaSpout()为spout具体实现，请打开kafkaSpout.java查看
-        topologyBuilder.setSpout("kafkaSpout",new kafkaSpout());
+        topologyBuilder.setSpout("kafkaSpout",new KafkaSpout(spoutConfig),1);
         topologyBuilder.setBolt("ParserBolt", new ParserBolt()).shuffleGrouping("kafkaSpout");
         topologyBuilder.setBolt("analyseBolt", new analyseBolt()).shuffleGrouping("ParserBolt");
         topologyBuilder.setBolt("dataBaseBolt", new myStorm.dataBaseBolt()).shuffleGrouping("analyseBolt");
         StormTopology topology = topologyBuilder.createTopology();
         //在本地提交
         localSubmit(topology, conf);
-        //jsonProducer.producerStart();
+        jsonProducer.producerStart();
         //remoteSubmit(topology,"Test");
 
 

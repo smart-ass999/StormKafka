@@ -9,7 +9,7 @@ public class Result {
         private String entrust_account = "未知";
         private String stock_symbol = "未知";
         private String description = "未知";
-        private String risk_level = "未知";
+        private String risk_level = "null";
 
 
 

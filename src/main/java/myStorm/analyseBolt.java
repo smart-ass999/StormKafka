@@ -25,7 +25,13 @@ public class analyseBolt extends BaseBasicBolt {
         System.out.println("获得数据" + tuple.getStringByField("result"));
         String entrustString = tuple.getStringByField("result");
         this.basicOutputCollector = basicOutputCollector;
-        String resultString  = getResultString(entrustString);
+        String resultString  = null;
+        try {
+            resultString = getResultString(entrustString);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         //最终发送给databasebolt的json串
         System.out.println("得到结果数据" + resultString);
         this.basicOutputCollector.emit(new Values(resultString));

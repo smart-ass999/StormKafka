@@ -7,6 +7,8 @@ public class rotation_info {
     private double quantity_in=0;
     private double quantity_out=0;
     private String time="";
+    private double price_in=0;
+    private double price_out=0;
     private double amount_in=0;
     private double amount_out=0;
 
@@ -16,6 +18,16 @@ public class rotation_info {
 
     public void setQuantity_in(double quantity_in) {
         this.quantity_in = quantity_in;
+    }
+    public double getAmount_in() {
+        return amount_in;
+    }
+
+    public void setAmount_in(double amount_in) {
+        this.amount_in = amount_in;
+    }
+    public double getAmount_out() {
+        return amount_out;
     }
 
     public double getQuantity_out() {
@@ -34,20 +46,20 @@ public class rotation_info {
         this.time = time;
     }
 
-    public double getAmount_in() {
-        return amount_in;
+    public double getPrice_in() {
+        return price_in;
     }
 
-    public void setAmount_in(double amount_in) {
-        this.amount_in = amount_in;
+    public void setPrice_in(double price_in) {
+        this.price_in = price_in;
     }
 
-    public double getAmount_out() {
-        return amount_out;
+    public double getPrice_out() {
+        return price_out;
     }
 
-    public void setAmount_out(double amount_out) {
-        this.amount_out = amount_out;
+    public void setPrice_out(double price_out) {
+        this.price_out = price_out;
     }
 
     @Override
@@ -56,8 +68,8 @@ public class rotation_info {
                 "quantity_in=" + quantity_in +
                 ", quantity_out=" + quantity_out +
                 ", time='" + time + '\'' +
-                ", amount_in=" + amount_in +
-                ", amount_out=" + amount_out +
+                ", amount_in=" + price_in +
+                ", amount_out=" + price_out +
                 '}';
     }
 }

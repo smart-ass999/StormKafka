@@ -12,6 +12,8 @@ import org.apache.storm.tuple.Values;
 import java.lang.reflect.Type;
 import java.util.List;
 
+import static myJDBC.JDBCUtils.InsertReultList;
+
 
 public class dataBaseBolt extends BaseBasicBolt {
 
@@ -21,7 +23,7 @@ public class dataBaseBolt extends BaseBasicBolt {
         String resultString = tuple.getStringByField("result");
         System.out.println("存入结果数据" + resultString);
         try {
-            //myUtils.InsertReultList(resultString);
+            InsertReultList(resultString);
         } catch (Exception e) {
             e.printStackTrace();
         }

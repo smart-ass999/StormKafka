@@ -8,15 +8,18 @@ import org.apache.storm.tuple.Fields;
 import org.apache.storm.tuple.Tuple;
 import org.apache.storm.tuple.Values;
 
+import static myJDBC.JDBCUtils.InsertReultList;
+
 public class ParserBolt extends BaseBasicBolt {
     private BasicOutputCollector basicOutputCollector;
     @Override
     public void execute(Tuple tuple, BasicOutputCollector basicOutputCollector) {
         //根据之前Spout定义的数据域读取数据
-        System.out.println("处理数据" + tuple.getStringByField("result"));
+        System.out.println("处理数据" + tuple.getValue(0));
         this.basicOutputCollector = basicOutputCollector;
         //发送给下一个Bolt
-        this.basicOutputCollector.emit(new Values(tuple.getStringByField("result")));
+        //InsertReultList(tuple.getValue(0));
+        this.basicOutputCollector.emit(new Values(tuple.getValue(0)));
 
     }
 
