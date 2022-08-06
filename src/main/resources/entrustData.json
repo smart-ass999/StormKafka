@@ -1,4 +1,4 @@
-{
+[{
   "entrust_date" :"未知",
   "entrust_time" : "未知",
   "market_sector" : "1",
@@ -10,5 +10,4 @@
   "entrust_count" : "未知",
   "entrust_prise" : "未知",
   "entrust_amount" : "未知"
-
-}
+}]

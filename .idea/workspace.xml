@@ -9,16 +9,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da571aa3-a259-4e31-8957-76c43168b3d6" name="Changes" comment="在JDBC部分增加了两个读取JSON字符串的方法">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_log4j_over_slf4j_1_6_6.xml" beforeDir="false" />
+    <list default="true" id="da571aa3-a259-4e31-8957-76c43168b3d6" name="Changes" comment="对各模块进行整合，封装了各部分内部逻辑">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_1_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/druid.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/StormKafka.iml" beforeDir="false" afterPath="$PROJECT_DIR$/StormKafka.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/analyseBolt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/analyseBolt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dataBaseBolt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataBaseBolt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kafkaSpout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kafkaSpout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/myJDBC/myUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myJDBC/myUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/remoteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/remoteTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myAnalyse/Analyse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myAnalyse/Analyse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myJDBC/Entrust.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myJDBC/Entrust.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myJDBC/JDBCUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myJDBC/JDBCUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myJDBC/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myJDBC/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myJDBC/functionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myJDBC/functionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myJDBC/rotation_info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myJDBC/rotation_info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myKafka/jsonProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myKafka/jsonProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myKafka/setKafka.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myKafka/setKafka.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myStorm/ParserBolt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myStorm/ParserBolt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myStorm/analyseBolt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myStorm/analyseBolt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myStorm/dataBaseBolt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myStorm/dataBaseBolt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myStorm/kafkaSpout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myStorm/kafkaSpout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/remoteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stormStart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +85,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -88,6 +100,7 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\StormKafka\src\main\resources" />
+      <recent name="E:\StormKafka\src\main\java\myJDBC" />
       <recent name="E:\StormKafka\src\main\java\myKafka" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -98,47 +111,15 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.remoteTest">
-    <configuration name="remoteTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="remoteTest" />
+  <component name="RunManager" selected="Application.stormStart">
+    <configuration name="stormStart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="stormStart" />
       <module name="StormKafka" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomConsumer.consumerStart" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="StormKafka" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="myKafka.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="myKafka" />
-      <option name="MAIN_CLASS_NAME" value="myKafka.CustomConsumer" />
-      <option name="METHOD_NAME" value="consumerStart" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CustomProducerCallbackJSON.producerStart" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="StormKafka" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="myKafka.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="myKafka" />
-      <option name="MAIN_CLASS_NAME" value="myKafka.CustomProducerCallbackJSON" />
-      <option name="METHOD_NAME" value="producerStart" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="myUtils.getEntrustJson" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="functionTest.CountnAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="StormKafka" />
       <extension name="coverage">
         <pattern>
@@ -147,14 +128,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="myJDBC" />
-      <option name="MAIN_CLASS_NAME" value="myJDBC.myUtils" />
-      <option name="METHOD_NAME" value="getEntrustJson" />
+      <option name="MAIN_CLASS_NAME" value="myJDBC.functionTest" />
+      <option name="METHOD_NAME" value="CountnAll" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="myUtils.getResult" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="functionTest.connnection" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="StormKafka" />
       <extension name="coverage">
         <pattern>
@@ -163,8 +144,40 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="myJDBC" />
-      <option name="MAIN_CLASS_NAME" value="myJDBC.myUtils" />
-      <option name="METHOD_NAME" value="getResult" />
+      <option name="MAIN_CLASS_NAME" value="myJDBC.functionTest" />
+      <option name="METHOD_NAME" value="connnection" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="functionTest.delete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StormKafka" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="myJDBC.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="myJDBC" />
+      <option name="MAIN_CLASS_NAME" value="myJDBC.functionTest" />
+      <option name="METHOD_NAME" value="delete" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="functionTest.insert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StormKafka" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="myJDBC.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="myJDBC" />
+      <option name="MAIN_CLASS_NAME" value="myJDBC.functionTest" />
+      <option name="METHOD_NAME" value="insert" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -183,11 +196,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.remoteTest" />
-        <item itemvalue="JUnit.myUtils.getResult" />
-        <item itemvalue="JUnit.myUtils.getEntrustJson" />
-        <item itemvalue="JUnit.CustomProducerCallbackJSON.producerStart" />
-        <item itemvalue="JUnit.CustomConsumer.consumerStart" />
+        <item itemvalue="Application.stormStart" />
+        <item itemvalue="JUnit.functionTest.delete" />
+        <item itemvalue="JUnit.functionTest.insert" />
+        <item itemvalue="JUnit.functionTest.CountnAll" />
+        <item itemvalue="JUnit.functionTest.connnection" />
       </list>
     </recent_temporary>
   </component>
@@ -220,7 +233,18 @@
       <workItem from="1658990532772" duration="8007000" />
       <workItem from="1659011125686" duration="3179000" />
       <workItem from="1659055180435" duration="11534000" />
-      <workItem from="1659077689455" duration="9471000" />
+      <workItem from="1659077689455" duration="12066000" />
+      <workItem from="1659095468307" duration="2377000" />
+      <workItem from="1659338401805" duration="9208000" />
+      <workItem from="1659361775507" duration="21950000" />
+      <workItem from="1659445312923" duration="7214000" />
+      <workItem from="1659488004432" duration="12973000" />
+      <workItem from="1659508481375" duration="14733000" />
+      <workItem from="1659541685435" duration="670000" />
+      <workItem from="1659574720932" duration="6458000" />
+      <workItem from="1659595125827" duration="19469000" />
+      <workItem from="1659620220860" duration="1230000" />
+      <workItem from="1659621498158" duration="11758000" />
     </task>
     <task id="LOCAL-00001" summary="编写了JDBC模块，但没有并入到storm部分">
       <created>1658894938667</created>
@@ -299,7 +323,70 @@
       <option name="project" value="LOCAL" />
       <updated>1659059511066</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="实现了云端提交功能，完善了数据流获取功能">
+      <created>1659088410075</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1659088410075</updated>
+    </task>
+    <task id="LOCAL-00013" summary="删除了不必要的代码，优化了数据库接口结构">
+      <created>1659345784845</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1659345784845</updated>
+    </task>
+    <task id="LOCAL-00014" summary="默认本地运行">
+      <created>1659346326244</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1659346326244</updated>
+    </task>
+    <task id="LOCAL-00015" summary="加入了kafkaspout">
+      <created>1659443153363</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1659443153363</updated>
+    </task>
+    <task id="LOCAL-00016" summary="对各模块进行整合，封装了各部分内部逻辑">
+      <created>1659523852287</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1659523852287</updated>
+    </task>
+    <task id="LOCAL-00017" summary="对各模块进行整合，封装了各部分内部逻辑">
+      <created>1659541712268</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1659541712268</updated>
+    </task>
+    <task id="LOCAL-00018" summary="对各模块进行整合，封装了各部分内部逻辑">
+      <created>1659541810551</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1659541810551</updated>
+    </task>
+    <task id="LOCAL-00019" summary="对各模块进行整合，封装了各部分内部逻辑">
+      <created>1659541845730</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1659541845730</updated>
+    </task>
+    <task id="LOCAL-00020" summary="对各模块进行整合，封装了各部分内部逻辑">
+      <created>1659542006001</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1659542006001</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,7 +421,12 @@
     <MESSAGE value="修改了变量名，增加了json格式范例" />
     <MESSAGE value="增加了kafka远程连接模块，引入了gson依赖，用于处理json数据" />
     <MESSAGE value="在JDBC部分增加了两个读取JSON字符串的方法" />
-    <option name="LAST_COMMIT_MESSAGE" value="在JDBC部分增加了两个读取JSON字符串的方法" />
+    <MESSAGE value="实现了云端提交功能，完善了数据流获取功能" />
+    <MESSAGE value="删除了不必要的代码，优化了数据库接口结构" />
+    <MESSAGE value="默认本地运行" />
+    <MESSAGE value="加入了kafkaspout" />
+    <MESSAGE value="对各模块进行整合，封装了各部分内部逻辑" />
+    <option name="LAST_COMMIT_MESSAGE" value="对各模块进行整合，封装了各部分内部逻辑" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
